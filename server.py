@@ -10,13 +10,13 @@ def index():
     return render_template('index.html')
 
 @app.route('/handle_data', methods=['POST'])
-def save_data():
+def handle_data():
     """Write values to session"""
-    session['first_name'] = request.form['First Name']
-    session['last_name'] = request.form['Last Name']
+    session['first_name'] = request.form['first_name']
+    session['last_name'] = request.form['last_name']
     session['dojo_location'] = request.form['dojo']
     session['fav_lang'] = request.form['lang']
-    session['comment'] = request.form['']
+    session['comment'] = request.form['comments']
     return redirect('/result')
     
 
