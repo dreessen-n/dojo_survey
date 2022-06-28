@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
     <title>Results</title>
 </head>
 <body>
-    <h1>Submitted Info:</h1>
-    <h2>Name: {{ session['name'] }}</h2>
-    <h2>Dojo Location: {{ session['dojo_location'] }}</h2>
-    <h2>Favorite Language: {{ session['fav_lang'] }}</h2>
-    <h2>Additional Comments: {{ session['comment'] }}</h2>
+    <div class="wrapper">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Submitted Info:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td>{{ session['name'] }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Location</th>
+                    <td>{{ session['dojo_location'] }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Language</th>
+                    <td>{{ session['fav_lang'] }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Comments</th>
+                    <td>{{ session['comment'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
