@@ -10,31 +10,42 @@
 </head>
 <body>
     <div class="wrapper">
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Submitted Info:</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Name</th>
-                    <td>{{ session['name'] }}</td>
-                </tr>
-                <tr>
-                    <th scope="row">Location</th>
-                    <td>{{ session['dojo_location'] }}</td>
-                </tr>
-                <tr>
-                    <th scope="row">Language</th>
-                    <td>{{ session['fav_lang'] }}</td>
-                </tr>
-                <tr>
-                    <th scope="row">Comments</th>
-                    <td>{{ session['comment'] }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
+        <div class="wrapper">
+            <div class="container py-5 mb-4 bg-light rounded-3 ">
+            <div class="p-5 mb-4 lc-block">
+                <div class="lc-block">
+                <div editable="rich">
+                    <h2 class="fw-bolder display-3">Submitted Info:</h2>
+                </div>
+                </div>
+                <div class="lc-block col-md-8">
+                <div editable="rich">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Name</th>
+                                <td>{{ session['name'] }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Location</th>
+                                <td>{{ session['dojo_location'] }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Language</th>
+                                <td>{{ session['fav_lang'] }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Comments</th>
+                                <td>{{ session['comment'] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
 </body>
 </html>
