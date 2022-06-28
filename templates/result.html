@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Submitted Info:</h1>
-    <p>{{ session['first_name'] }} {{ session['last_name'] }}</p>
-    <p>{{ session['dojo_location'] }}</p>
-    <p>{{ session['fav_lang'] }}</p>
-    <p>{{ session['comment'] }}</p>
+    <h2>Name: {{ session['name'] }}</h2>
+    <h2>Dojo Location: {{ session['dojo_location'] }}</h2>
+    <h2>Favorite Language: {{ session['fav_lang'] }}</h2>
+    <h2>Additional Comments: {{ session['comment'] }}</h2>
 </body>
 </html>

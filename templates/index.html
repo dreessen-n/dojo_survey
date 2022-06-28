@@ -9,24 +9,24 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/handle_data" method="POST">
+    <form action="/handle_data" method="post">
+    <!-- <form action="/test"> -->
       <div class="wrapper">
         <h1>Dojo Survey</h1>
         <!-- Get Name -->
         <div class="input-group">
           <span class="input-group-text">First and Last Name</span>
-          <input type="text" id="fist_name" aria-label="First Name" class="form-control">
-          <input type="text" id="last_name" aria-label="Last name" class="form-control">
+          <input type="text" name="name" aria-label="Name" class="form-control">
         </div>
         <!-- Get dojo location - drop-down menu -->
         <div class="row g-2">
           <div class="col-md">
             <div class="form-floating">
-              <select class="form-select" id="dojo" aria-label="Floating label select example">
+              <select class="form-select" name="dojo_location" aria-label="Floating label select example">
                 <option selected>select...</option>
-                <option value="1">Bellview, WA</option>
-                <option value="2">Silicon Valley, CA</option>
-                <option value="3">Los Angeles, CA</option>
+                <option value="Washington">Washington</option>
+                <option value="California">California</option>
+                <option value="Denver">Denver</option>
               </select>
               <label for="floatingSelect">Dojo Location</label>
             </div>
@@ -34,12 +34,12 @@
           <!-- Get favorite language -drop-down menu -->
           <div class="col-md">
             <div class="form-floating">
-              <select class="form-select" id="lang" aria-label="Floating label select example">
+              <select class="form-select" name="lang" aria-label="Floating label select example">
                 <option selected>select...</option>
-                <option value="1">Python</option>
-                <option value="2">JavaScript</option>
-                <option value="3">Java</option>
-                <option value="4">PHP</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="PHP">PHP</option>
               </select>
               <label for="floatingSelectGrid">Favorite Language</label>
             </div>
@@ -47,7 +47,7 @@
         </div>
         <!-- Comments - optional - text box -->
         <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="comments" style="height: 100px"></textarea>
+          <textarea class="form-control" id="comments" placeholder="Leave a comment here" name="comments" style="height: 100px"></textarea>
           <label for="comments">Comments</label>
         </div>
         <!-- Submit button -->

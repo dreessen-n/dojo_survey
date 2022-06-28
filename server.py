@@ -9,16 +9,19 @@ def index():
     """POST input"""
     return render_template('index.html')
 
-@app.route('/handle_data', methods=['POST'])
+@app.route('/handle_data',methods=['POST'])
 def handle_data():
     """Write values to session"""
-    session['first_name'] = request.form['first_name']
-    session['last_name'] = request.form['last_name']
-    session['dojo_location'] = request.form['dojo']
+    session['name'] = request.form['name']
+    session['dojo_location'] = request.form['dojo_location']
     session['fav_lang'] = request.form['lang']
     session['comment'] = request.form['comments']
     return redirect('/result')
-    
+
+@app.route('/test')
+def test():
+    print(request.form)
+    return render_template('test.html')
 
 @app.route('/result')
 def results():
