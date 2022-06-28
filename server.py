@@ -18,19 +18,20 @@ def handle_data():
     session['comment'] = request.form['comments']
     return redirect('/result')
 
-@app.route('/test')
-def test():
-    print(request.form)
-    return render_template('test.html')
+@app.route('/end_session')
+def end_session():
+    """"Clear the session and return to index"""
+    session.clear()
+    return redirect('/')
 
 @app.route('/result')
 def results():
     """Print Results"""
     return render_template('result.html')
 
-# Error message for 404
 @app.errorhandler(404)
 def page_not_found(e):
+    """""Error message for 404"""
     return f'Sorry! No response. Try again.'
 
 # Ensure file is run directly and not from different
