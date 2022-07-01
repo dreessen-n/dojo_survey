@@ -10,45 +10,42 @@
 </head>
 <body>
     <div class="wrapper">
-
-        <div class="wrapper">
-            <div class="container py-5 mb-4 bg-light rounded-3 ">
+        <div class="container py-5 mb-4 bg-light rounded-3 ">
             <div class="p-5 mb-4 lc-block">
                 <div class="lc-block">
-                <div editable="rich">
-                    <h2 class="fw-bolder display-3">Submitted Info:</h2>
-                </div>
-                </div>
-                <div class="lc-block col-md-12">
-                <div editable="rich">
-                    <table class="table table-striped">
-                        <tbody>
-                            <tr>
-                                <th scope="row">Name</th>
-                                <td>{{ session['name'] }}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Location</th>
-                                <td>{{ session['dojo_location'] }}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Language</th>
-                                <td>{{ session['fav_lang'] }}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Comments</th>
-                                <td>{{ session['comment'] }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
-                        <a class="btn btn-primary btn-lg px-4 gap-3 btn-warning" href="/end_session" role="button">Reset</a>
+                    <div editable="rich">
+                        <h2 class="fw-bolder display-3">Submitted Info:</h2>
                     </div>
                 </div>
+                <div class="lc-block col-md-12">
+                    <div editable="rich">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Name</th>
+                                    <td>{{ session['name'] }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Location</th>
+                                    <td>{{ session['dojo_location'] }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Language</th>
+                                    <td>{{ session['fav_lang'] }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Comments</th>
+                                    <td>{{ session['comment'] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
+                            <a class="btn btn-primary btn-lg px-4 gap-3 btn-warning" href="/end_session" role="button">Reset</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
+    </div>
 </body>
 </html>
